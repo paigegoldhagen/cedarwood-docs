@@ -1,0 +1,14 @@
+site_name: Cedarwood Documentation
+
+theme:
+  name: 'material'
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Overview: 'index.md'
+  - Database modules: 'database.md'
+  - Calculator modules: 'calculator.md'
+  - GUI module: 'gui.md'
+  - Other modules: 'other.md'
