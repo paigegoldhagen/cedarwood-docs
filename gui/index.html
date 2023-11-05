@@ -1,0 +1,2395 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../calculator/">
+      
+      
+        <link rel="next" href="../other/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>GUI module - Cedarwood Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#src.gui" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cedarwood Documentation" class="md-header__button md-logo" aria-label="Cedarwood Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cedarwood Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GUI module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cedarwood Documentation" class="md-nav__button md-logo" aria-label="Cedarwood Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Cedarwood Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calculator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculator modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GUI module
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    GUI module
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui" class="md-nav__link">
+    gui
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.InitialiseWindow" class="md-nav__link">
+    InitialiseWindow
+  </a>
+  
+    <nav class="md-nav" aria-label="InitialiseWindow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.InitialiseWindow.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.LoginView" class="md-nav__link">
+    LoginView
+  </a>
+  
+    <nav class="md-nav" aria-label="LoginView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.LoginView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.LoginView.__login" class="md-nav__link">
+    __login()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.MainView" class="md-nav__link">
+    MainView
+  </a>
+  
+    <nav class="md-nav" aria-label="MainView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.MainView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.Page" class="md-nav__link">
+    Page
+  </a>
+  
+    <nav class="md-nav" aria-label="Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.Page.show" class="md-nav__link">
+    show()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.PayslipView" class="md-nav__link">
+    PayslipView
+  </a>
+  
+    <nav class="md-nav" aria-label="PayslipView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.PayslipView.__export_payslip" class="md-nav__link">
+    __export_payslip()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.PayslipView.__go_back" class="md-nav__link">
+    __go_back()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.PayslipView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.SummaryView" class="md-nav__link">
+    SummaryView
+  </a>
+  
+    <nav class="md-nav" aria-label="SummaryView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__go_back" class="md-nav__link">
+    __go_back()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__record_selected" class="md-nav__link">
+    __record_selected()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__switch_view" class="md-nav__link">
+    __switch_view()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui" class="md-nav__link">
+    gui
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.InitialiseWindow" class="md-nav__link">
+    InitialiseWindow
+  </a>
+  
+    <nav class="md-nav" aria-label="InitialiseWindow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.InitialiseWindow.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.LoginView" class="md-nav__link">
+    LoginView
+  </a>
+  
+    <nav class="md-nav" aria-label="LoginView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.LoginView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.LoginView.__login" class="md-nav__link">
+    __login()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.MainView" class="md-nav__link">
+    MainView
+  </a>
+  
+    <nav class="md-nav" aria-label="MainView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.MainView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.Page" class="md-nav__link">
+    Page
+  </a>
+  
+    <nav class="md-nav" aria-label="Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.Page.show" class="md-nav__link">
+    show()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.PayslipView" class="md-nav__link">
+    PayslipView
+  </a>
+  
+    <nav class="md-nav" aria-label="PayslipView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.PayslipView.__export_payslip" class="md-nav__link">
+    __export_payslip()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.PayslipView.__go_back" class="md-nav__link">
+    __go_back()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.PayslipView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.gui.SummaryView" class="md-nav__link">
+    SummaryView
+  </a>
+  
+    <nav class="md-nav" aria-label="SummaryView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__go_back" class="md-nav__link">
+    __go_back()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__record_selected" class="md-nav__link">
+    __record_selected()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.gui.SummaryView.__switch_view" class="md-nav__link">
+    __switch_view()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>GUI module</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="src.gui"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.gui.InitialiseWindow" class="doc doc-heading">
+          <code>InitialiseWindow</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/gui.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">InitialiseWindow</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call the main loop of Tkinter to show the app window.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+        <span class="n">main</span> <span class="o">=</span> <span class="n">MainView</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+        <span class="n">main</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">window</span><span class="o">.</span><span class="n">wm_geometry</span><span class="p">(</span><span class="s1">&#39;400x350&#39;</span><span class="p">)</span>
+        <span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Cedarwood&#39;</span><span class="p">)</span>
+        <span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.InitialiseWindow.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Call the main loop of Tkinter to show the app window.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Call the main loop of Tkinter to show the app window.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+    <span class="n">main</span> <span class="o">=</span> <span class="n">MainView</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+    <span class="n">main</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">wm_geometry</span><span class="p">(</span><span class="s1">&#39;400x350&#39;</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Cedarwood&#39;</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.gui.LoginView" class="doc doc-heading">
+          <code>LoginView</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="src.gui.Page" href="#src.gui.Page">Page</a></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/gui.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LoginView</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load the GUI elements - username entry, password entry, login button.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">username_input</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password_input</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+
+        <span class="n">login_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Log in&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__login</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">username_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">password_input</span><span class="p">,</span> <span class="n">login_button</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__login</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the user inputs to pass to the DatabaseConnection class, pass the resulting database cursor to the Summary view, and load the Summary view.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">username_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">username_input</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">password_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">password_input</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">username_string</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">password_string</span><span class="p">:</span>
+            <span class="n">messagebox</span><span class="o">.</span><span class="n">showerror</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Please enter username and password&#39;</span><span class="p">)</span>
+
+        <span class="n">database</span> <span class="o">=</span> <span class="n">DatabaseConnection</span><span class="p">(</span><span class="n">username_string</span><span class="p">,</span> <span class="n">password_string</span><span class="p">)</span>
+        <span class="n">database_cursor</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">connection</span>
+
+        <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">summary</span> <span class="o">=</span> <span class="n">SummaryView</span><span class="p">(</span><span class="n">database_cursor</span><span class="p">)</span>
+        <span class="n">summary</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+        <span class="n">summary</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.LoginView.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load the GUI elements - username entry, password entry, login button.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load the GUI elements - username entry, password entry, login button.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">username_input</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">password_input</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+
+    <span class="n">login_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Log in&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__login</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">username_input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">password_input</span><span class="p">,</span> <span class="n">login_button</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.LoginView.__login" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__login</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the user inputs to pass to the DatabaseConnection class, pass the resulting database cursor to the Summary view, and load the Summary view.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__login</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the user inputs to pass to the DatabaseConnection class, pass the resulting database cursor to the Summary view, and load the Summary view.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">username_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">username_input</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="n">password_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">password_input</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">username_string</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">password_string</span><span class="p">:</span>
+        <span class="n">messagebox</span><span class="o">.</span><span class="n">showerror</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Please enter username and password&#39;</span><span class="p">)</span>
+
+    <span class="n">database</span> <span class="o">=</span> <span class="n">DatabaseConnection</span><span class="p">(</span><span class="n">username_string</span><span class="p">,</span> <span class="n">password_string</span><span class="p">)</span>
+    <span class="n">database_cursor</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">connection</span>
+
+    <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">summary</span> <span class="o">=</span> <span class="n">SummaryView</span><span class="p">(</span><span class="n">database_cursor</span><span class="p">)</span>
+    <span class="n">summary</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+    <span class="n">summary</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.gui.MainView" class="doc doc-heading">
+          <code>MainView</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="tkinter.Frame">Frame</span></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/gui.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">MainView</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determine which GUI elements should appear in all views and load the Login view.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="n">login</span> <span class="o">=</span> <span class="n">LoginView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">title_frame</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">title_frame</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+        <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">login</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">title</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">title_frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;🌳</span><span class="se">\n</span><span class="s1">Cedarwood&#39;</span><span class="p">)</span>
+        <span class="n">title</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">login</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.MainView.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine which GUI elements should appear in all views and load the Login view.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine which GUI elements should appear in all views and load the Login view.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="n">login</span> <span class="o">=</span> <span class="n">LoginView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="n">title_frame</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="n">title_frame</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">login</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">title_frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;🌳</span><span class="se">\n</span><span class="s1">Cedarwood&#39;</span><span class="p">)</span>
+    <span class="n">title</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">login</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.gui.Page" class="doc doc-heading">
+          <code>Page</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="tkinter.Frame">Frame</span></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/gui.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Raise the current page in the viewing stack.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lift</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.Page.show" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">show</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Raise the current page in the viewing stack.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Raise the current page in the viewing stack.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lift</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.gui.PayslipView" class="doc doc-heading">
+          <code>PayslipView</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="src.gui.Page" href="#src.gui.Page">Page</a></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/gui.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PayslipView</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">:</span> <span class="n">Cursor</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get an employee record from the employee query, passing the results to the PayCalculator class, and displaying all results.</span>
+
+<span class="sd">        Load the GUI elements - subtitle label, date label, basic info label, hours label, tax label, pay info label, export button, back button.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            cursor: The database cursor used for executing queries in the Employee class</span>
+<span class="sd">            id: The employee ID to use in the query string</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span> <span class="o">=</span> <span class="n">cursor</span>
+
+        <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;employee_information&#39;</span>
+
+        <span class="n">employee_data</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+        <span class="n">query_result</span> <span class="o">=</span> <span class="n">employee_data</span><span class="o">.</span><span class="n">query_result</span>
+
+        <span class="n">employee_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">hourly_rate</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> \
+        <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">,</span> <span class="n">date_submitted</span> <span class="o">=</span> <span class="n">query_result</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_name_template</span> <span class="o">=</span> <span class="s1">&#39;payslip_&#39;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">date_submitted</span><span class="p">)</span>
+        <span class="n">full_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">last_name</span>
+
+        <span class="n">subtitle</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Payslip for &#39;</span><span class="o">+</span> <span class="n">full_name</span><span class="p">)</span>
+        <span class="n">date_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Date submitted: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">date_submitted</span><span class="p">))</span>
+
+        <span class="n">basic_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Employee ID: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">employee_id</span><span class="p">)</span> <span class="o">+</span> 
+                                   <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Name: &#39;</span> <span class="o">+</span> <span class="n">full_name</span> <span class="o">+</span>
+                                   <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Hourly rate: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">hourly_rate</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span><span class="p">)</span>
+
+        <span class="n">hours_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Hours worked this week: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">hours_worked</span><span class="p">))</span>
+
+        <span class="n">tax_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;TFN: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tfn</span><span class="p">)</span> <span class="o">+</span>
+                                 <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Tax threshold claimed: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">threshold_claimed</span><span class="p">)</span> <span class="o">+</span>
+                                 <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Country of residence: &#39;</span> <span class="o">+</span> <span class="n">country</span><span class="p">)</span>
+
+        <span class="n">pay_calculator</span> <span class="o">=</span> <span class="n">PayCalculator</span><span class="p">(</span><span class="n">hourly_rate</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">,</span> <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">country</span><span class="p">)</span>
+        <span class="n">gross_pay</span><span class="p">,</span> <span class="n">tax_amount</span><span class="p">,</span> <span class="n">superannuation</span><span class="p">,</span> <span class="n">net_pay</span> <span class="o">=</span> <span class="n">pay_calculator</span><span class="o">.</span><span class="n">results</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">payslip_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">employee_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">date_submitted</span><span class="p">,</span> \
+                             <span class="n">gross_pay</span><span class="p">,</span> <span class="n">tax_amount</span><span class="p">,</span> <span class="n">superannuation</span><span class="p">,</span> <span class="n">net_pay</span><span class="p">]</span>
+
+        <span class="n">pay_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Gross pay: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span> <span class="o">+</span> 
+                                 <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Tax amount: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tax_amount</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span> <span class="o">+</span>
+                                 <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Superannuation: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">superannuation</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span> <span class="o">+</span>
+                                 <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Net pay: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">net_pay</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span><span class="p">)</span>
+
+        <span class="n">export_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Export as .csv&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__export_payslip</span><span class="p">)</span>
+        <span class="n">back_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Go back&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__go_back</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">subtitle</span><span class="p">,</span> <span class="n">date_info</span><span class="p">,</span> <span class="n">basic_info</span><span class="p">,</span> \
+                                 <span class="n">hours_info</span><span class="p">,</span> <span class="n">tax_info</span><span class="p">,</span> <span class="n">pay_info</span><span class="p">,</span>  \
+                                 <span class="n">export_button</span><span class="p">,</span> <span class="n">back_button</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__export_payslip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Export the query and calculator results to CSV by using the CsvWriter class and asking the user for an export directory.</span>
+
+<span class="sd">        Show a confirmation message if the file was exported successfully.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">export_location</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">()</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name_template</span>
+
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">export_location</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
+
+        <span class="n">CsvWriter</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">payslip_data</span><span class="p">)</span>
+        <span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s1">&#39;Payslip exported&#39;</span><span class="p">,</span> <span class="s1">&#39;The payslip was exported to:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">file_path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__go_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Go back to the Summary view.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">summary</span> <span class="o">=</span> <span class="n">SummaryView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span><span class="p">)</span>
+
+        <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">summary</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+        <span class="n">summary</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.PayslipView.__export_payslip" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__export_payslip</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Export the query and calculator results to CSV by using the CsvWriter class and asking the user for an export directory.</p>
+<p>Show a confirmation message if the file was exported successfully.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__export_payslip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Export the query and calculator results to CSV by using the CsvWriter class and asking the user for an export directory.</span>
+
+<span class="sd">    Show a confirmation message if the file was exported successfully.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">export_location</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">()</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name_template</span>
+
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">export_location</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
+
+    <span class="n">CsvWriter</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">payslip_data</span><span class="p">)</span>
+    <span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s1">&#39;Payslip exported&#39;</span><span class="p">,</span> <span class="s1">&#39;The payslip was exported to:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">file_path</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.PayslipView.__go_back" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__go_back</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Go back to the Summary view.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__go_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Go back to the Summary view.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">summary</span> <span class="o">=</span> <span class="n">SummaryView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span><span class="p">)</span>
+
+    <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">summary</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+    <span class="n">summary</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.PayslipView.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get an employee record from the employee query, passing the results to the PayCalculator class, and displaying all results.</p>
+<p>Load the GUI elements - subtitle label, date label, basic info label, hours label, tax label, pay info label, export button, back button.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cursor</code></td>
+          <td>
+                <code><span title="pyodbc.Cursor">Cursor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The database cursor used for executing queries in the Employee class</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The employee ID to use in the query string</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">:</span> <span class="n">Cursor</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get an employee record from the employee query, passing the results to the PayCalculator class, and displaying all results.</span>
+
+<span class="sd">    Load the GUI elements - subtitle label, date label, basic info label, hours label, tax label, pay info label, export button, back button.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        cursor: The database cursor used for executing queries in the Employee class</span>
+<span class="sd">        id: The employee ID to use in the query string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span> <span class="o">=</span> <span class="n">cursor</span>
+
+    <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;employee_information&#39;</span>
+
+    <span class="n">employee_data</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+    <span class="n">query_result</span> <span class="o">=</span> <span class="n">employee_data</span><span class="o">.</span><span class="n">query_result</span>
+
+    <span class="n">employee_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">hourly_rate</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> \
+    <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">,</span> <span class="n">date_submitted</span> <span class="o">=</span> <span class="n">query_result</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">file_name_template</span> <span class="o">=</span> <span class="s1">&#39;payslip_&#39;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">date_submitted</span><span class="p">)</span>
+    <span class="n">full_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">last_name</span>
+
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Payslip for &#39;</span><span class="o">+</span> <span class="n">full_name</span><span class="p">)</span>
+    <span class="n">date_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Date submitted: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">date_submitted</span><span class="p">))</span>
+
+    <span class="n">basic_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Employee ID: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">employee_id</span><span class="p">)</span> <span class="o">+</span> 
+                               <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Name: &#39;</span> <span class="o">+</span> <span class="n">full_name</span> <span class="o">+</span>
+                               <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Hourly rate: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">hourly_rate</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span><span class="p">)</span>
+
+    <span class="n">hours_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Hours worked this week: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">hours_worked</span><span class="p">))</span>
+
+    <span class="n">tax_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;TFN: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tfn</span><span class="p">)</span> <span class="o">+</span>
+                             <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Tax threshold claimed: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">threshold_claimed</span><span class="p">)</span> <span class="o">+</span>
+                             <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Country of residence: &#39;</span> <span class="o">+</span> <span class="n">country</span><span class="p">)</span>
+
+    <span class="n">pay_calculator</span> <span class="o">=</span> <span class="n">PayCalculator</span><span class="p">(</span><span class="n">hourly_rate</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">,</span> <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">country</span><span class="p">)</span>
+    <span class="n">gross_pay</span><span class="p">,</span> <span class="n">tax_amount</span><span class="p">,</span> <span class="n">superannuation</span><span class="p">,</span> <span class="n">net_pay</span> <span class="o">=</span> <span class="n">pay_calculator</span><span class="o">.</span><span class="n">results</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">payslip_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">employee_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">date_submitted</span><span class="p">,</span> \
+                         <span class="n">gross_pay</span><span class="p">,</span> <span class="n">tax_amount</span><span class="p">,</span> <span class="n">superannuation</span><span class="p">,</span> <span class="n">net_pay</span><span class="p">]</span>
+
+    <span class="n">pay_info</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Gross pay: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span> <span class="o">+</span> 
+                             <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Tax amount: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tax_amount</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span> <span class="o">+</span>
+                             <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Superannuation: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">superannuation</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span> <span class="o">+</span>
+                             <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Net pay: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">net_pay</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; AUD&#39;</span><span class="p">)</span>
+
+    <span class="n">export_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Export as .csv&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__export_payslip</span><span class="p">)</span>
+    <span class="n">back_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Go back&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__go_back</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">subtitle</span><span class="p">,</span> <span class="n">date_info</span><span class="p">,</span> <span class="n">basic_info</span><span class="p">,</span> \
+                             <span class="n">hours_info</span><span class="p">,</span> <span class="n">tax_info</span><span class="p">,</span> <span class="n">pay_info</span><span class="p">,</span>  \
+                             <span class="n">export_button</span><span class="p">,</span> <span class="n">back_button</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.gui.SummaryView" class="doc doc-heading">
+          <code>SummaryView</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="src.gui.Page" href="#src.gui.Page">Page</a></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/gui.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">SummaryView</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">:</span> <span class="n">Cursor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Display a selectable list of results from the pay summary query.</span>
+
+<span class="sd">        Load the GUI elements - subtitle label, listbox, generate button, logout button, format legend label.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            cursor: The database cursor used for executing queries in the PaySummary class</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span> <span class="o">=</span> <span class="n">cursor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;pay_summary&#39;</span>
+
+        <span class="n">pay_summary</span> <span class="o">=</span> <span class="n">PaySummary</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+        <span class="n">query_result</span> <span class="o">=</span> <span class="n">pay_summary</span><span class="o">.</span><span class="n">query_result</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Weekly pay summary&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+        <span class="n">summary_variable_object</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">query_result</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Listbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+                                     <span class="n">listvariable</span><span class="o">=</span><span class="n">summary_variable_object</span><span class="p">,</span>
+                                     <span class="n">selectmode</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">BROWSE</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__record_selected</span><span class="p">)</span>
+
+        <span class="n">generate_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Generate a payslip&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__switch_view</span><span class="p">)</span>
+        <span class="n">logout_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Log out&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__go_back</span><span class="p">)</span>
+        <span class="n">legend</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Format: (ID, &#39;First name&#39;, &#39;Last name&#39;, Hours worked)&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">generate_button</span><span class="p">,</span> <span class="n">logout_button</span><span class="p">,</span> <span class="n">legend</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__record_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the row selected from the listbox and determine the employee ID using the StringFormatter class.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            event: The binding event that triggers this function - in this case, the binding sequence is `&lt;&lt;ListBoxSelect&gt;&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">widget</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">curselection</span><span class="p">()</span>
+        <span class="n">selected_record</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">string_formatter</span> <span class="o">=</span> <span class="n">StringFormatter</span><span class="p">(</span><span class="n">selected_record</span><span class="p">)</span>
+        <span class="n">individual_entries</span> <span class="o">=</span> <span class="n">string_formatter</span><span class="o">.</span><span class="n">individual_entries</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">employee_id</span> <span class="o">=</span> <span class="n">individual_entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__switch_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Show an error message if the user tries to generate a payslip without an employee selected, otherwise load the Payslip view.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span><span class="p">:</span>
+            <span class="n">messagebox</span><span class="o">.</span><span class="n">showerror</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Please select an employee&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">payslip</span> <span class="o">=</span> <span class="n">PayslipView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">employee_id</span><span class="p">)</span>
+            <span class="n">payslip</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+            <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+                <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+            <span class="n">payslip</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__go_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Go back to the Login view.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">login</span> <span class="o">=</span> <span class="n">LoginView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">login</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+        <span class="n">login</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.SummaryView.__go_back" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__go_back</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Go back to the Login view.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__go_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Go back to the Login view.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">login</span> <span class="o">=</span> <span class="n">LoginView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">login</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+    <span class="n">login</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.SummaryView.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">cursor</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Display a selectable list of results from the pay summary query.</p>
+<p>Load the GUI elements - subtitle label, listbox, generate button, logout button, format legend label.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cursor</code></td>
+          <td>
+                <code><span title="pyodbc.Cursor">Cursor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The database cursor used for executing queries in the PaySummary class</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">:</span> <span class="n">Cursor</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Display a selectable list of results from the pay summary query.</span>
+
+<span class="sd">    Load the GUI elements - subtitle label, listbox, generate button, logout button, format legend label.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        cursor: The database cursor used for executing queries in the PaySummary class</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Page</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span> <span class="o">=</span> <span class="n">cursor</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;pay_summary&#39;</span>
+
+    <span class="n">pay_summary</span> <span class="o">=</span> <span class="n">PaySummary</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+    <span class="n">query_result</span> <span class="o">=</span> <span class="n">pay_summary</span><span class="o">.</span><span class="n">query_result</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Weekly pay summary&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+    <span class="n">summary_variable_object</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">query_result</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Listbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+                                 <span class="n">listvariable</span><span class="o">=</span><span class="n">summary_variable_object</span><span class="p">,</span>
+                                 <span class="n">selectmode</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">BROWSE</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__record_selected</span><span class="p">)</span>
+
+    <span class="n">generate_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Generate a payslip&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__switch_view</span><span class="p">)</span>
+    <span class="n">logout_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Log out&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__go_back</span><span class="p">)</span>
+    <span class="n">legend</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Format: (ID, &#39;First name&#39;, &#39;Last name&#39;, Hours worked)&quot;</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">generate_button</span><span class="p">,</span> <span class="n">logout_button</span><span class="p">,</span> <span class="n">legend</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.SummaryView.__record_selected" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__record_selected</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the row selected from the listbox and determine the employee ID using the StringFormatter class.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>event</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The binding event that triggers this function - in this case, the binding sequence is <code>&lt;&lt;ListBoxSelect&gt;&gt;</code></p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__record_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the row selected from the listbox and determine the employee ID using the StringFormatter class.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        event: The binding event that triggers this function - in this case, the binding sequence is `&lt;&lt;ListBoxSelect&gt;&gt;`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">widget</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">widget</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">curselection</span><span class="p">()</span>
+    <span class="n">selected_record</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">string_formatter</span> <span class="o">=</span> <span class="n">StringFormatter</span><span class="p">(</span><span class="n">selected_record</span><span class="p">)</span>
+    <span class="n">individual_entries</span> <span class="o">=</span> <span class="n">string_formatter</span><span class="o">.</span><span class="n">individual_entries</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">employee_id</span> <span class="o">=</span> <span class="n">individual_entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.gui.SummaryView.__switch_view" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__switch_view</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Show an error message if the user tries to generate a payslip without an employee selected, otherwise load the Payslip view.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/gui.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__switch_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Show an error message if the user tries to generate a payslip without an employee selected, otherwise load the Payslip view.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_index</span><span class="p">:</span>
+        <span class="n">messagebox</span><span class="o">.</span><span class="n">showerror</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Please select an employee&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">container</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">payslip</span> <span class="o">=</span> <span class="n">PayslipView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_cursor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">employee_id</span><span class="p">)</span>
+        <span class="n">payslip</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">in_</span><span class="o">=</span><span class="n">container</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">relwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">relheight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">subtitle</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable_list</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gui_objects</span><span class="p">:</span>
+            <span class="nb">object</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+
+        <span class="n">payslip</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>

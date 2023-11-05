@@ -1,0 +1,1513 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../database/">
+      
+      
+        <link rel="next" href="../gui/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>Calculator modules - Cedarwood Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#src.pay_calculator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cedarwood Documentation" class="md-header__button md-logo" aria-label="Cedarwood Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cedarwood Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calculator modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cedarwood Documentation" class="md-nav__button md-logo" aria-label="Cedarwood Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Cedarwood Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Calculator modules
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Calculator modules
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.pay_calculator" class="md-nav__link">
+    pay_calculator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator" class="md-nav__link">
+    PayCalculator
+  </a>
+  
+    <nav class="md-nav" aria-label="PayCalculator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_gross" class="md-nav__link">
+    __calculate_gross()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_results" class="md-nav__link">
+    __calculate_results()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_super" class="md-nav__link">
+    __calculate_super()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_tax" class="md-nav__link">
+    __calculate_tax()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.tax_calculator" class="md-nav__link">
+    tax_calculator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.tax_calculator.TaxCalculator" class="md-nav__link">
+    TaxCalculator
+  </a>
+  
+    <nav class="md-nav" aria-label="TaxCalculator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.tax_calculator.TaxCalculator.__get_rate" class="md-nav__link">
+    __get_rate()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.pay_calculator" class="md-nav__link">
+    pay_calculator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator" class="md-nav__link">
+    PayCalculator
+  </a>
+  
+    <nav class="md-nav" aria-label="PayCalculator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_gross" class="md-nav__link">
+    __calculate_gross()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_results" class="md-nav__link">
+    __calculate_results()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_super" class="md-nav__link">
+    __calculate_super()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.pay_calculator.PayCalculator.__calculate_tax" class="md-nav__link">
+    __calculate_tax()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.tax_calculator" class="md-nav__link">
+    tax_calculator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.tax_calculator.TaxCalculator" class="md-nav__link">
+    TaxCalculator
+  </a>
+  
+    <nav class="md-nav" aria-label="TaxCalculator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.tax_calculator.TaxCalculator.__get_rate" class="md-nav__link">
+    __get_rate()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Calculator modules</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="src.pay_calculator"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.pay_calculator.PayCalculator" class="doc doc-heading">
+          <code>PayCalculator</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/pay_calculator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PayCalculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hourly_rate</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tfn</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">residence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__calculate_gross</span><span class="p">(</span><span class="n">hourly_rate</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__calculate_tax</span><span class="p">(</span><span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">super_amount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__calculate_super</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__calculate_results</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__calculate_gross</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hourly_rate</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the weekly gross pay for an employee.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            hourly_rate: The hourly rate for an employee in AUD</span>
+<span class="sd">            hours_worked: The amount of hours worked by an employee for the week</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            gross_pay(int): The weekly gross pay calculated with the formula `hourly rate * hours worked`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">gross_pay</span> <span class="o">=</span> <span class="n">hourly_rate</span> <span class="o">*</span> <span class="n">hours_worked</span>
+        <span class="k">return</span> <span class="n">gross_pay</span>
+
+    <span class="k">def</span> <span class="nf">__calculate_tax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tfn</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">residence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the tax amount by passing parameters to the TaxCalculator class to determine the correct tax formula.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            tfn: The Tax File Number of an employee (may be null)</span>
+<span class="sd">            threshold_claimed: A record of if an employee has claimed the tax-free threshold (may be null)</span>
+<span class="sd">            residence: The country of residence for an employee</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tax_amount(float): The weekly tax amount calculated with one of two formulas: `rounded gross pay * tax rate` or `coefficient A * (gross pay + 99 cents) - coefficient B`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span>
+
+        <span class="n">tax_calculator</span> <span class="o">=</span> <span class="n">TaxCalculator</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">,</span> <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span>
+        <span class="n">tax_rate</span> <span class="o">=</span> <span class="n">tax_calculator</span><span class="o">.</span><span class="n">tax_rate</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tax_rate</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="n">pay_rounded</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">)</span>
+            <span class="n">tax_amount</span> <span class="o">=</span> <span class="n">pay_rounded</span> <span class="o">*</span> <span class="n">tax_rate</span>
+            <span class="k">return</span> <span class="n">tax_amount</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">coef_a</span><span class="p">,</span> <span class="n">coef_b</span> <span class="o">=</span> <span class="n">tax_rate</span>
+
+            <span class="n">tax_amount</span> <span class="o">=</span> <span class="n">coef_a</span> <span class="o">*</span> <span class="p">(</span><span class="n">gross_pay</span> <span class="o">+</span> <span class="mf">0.99</span><span class="p">)</span> <span class="o">-</span> <span class="n">coef_b</span>
+            <span class="k">return</span> <span class="n">tax_amount</span>
+
+    <span class="k">def</span> <span class="nf">__calculate_super</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the superannuation amount using the current super guarantee percentage.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            superannuation(float): The weekly superannuation amount calculated with the formula `(gross pay * super percentage) / 100`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span>
+
+        <span class="n">super_percentage</span> <span class="o">=</span> <span class="mi">11</span>
+
+        <span class="n">superannuation</span> <span class="o">=</span> <span class="p">(</span><span class="n">gross_pay</span> <span class="o">*</span> <span class="n">super_percentage</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>
+        <span class="k">return</span> <span class="n">superannuation</span>
+
+    <span class="k">def</span> <span class="nf">__calculate_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the weekly net pay and pass all calculation results to the CentRounder class.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            rounded_results(tuple[str, str, str, str]): The calculation results for gross pay, tax, superannuation and net pay, rounded to 2 decimal places</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span>
+        <span class="n">tax_amount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span>
+        <span class="n">superannuation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">super_amount</span>
+
+        <span class="n">net_pay</span> <span class="o">=</span> <span class="n">gross_pay</span> <span class="o">-</span> <span class="n">tax_amount</span> <span class="o">-</span> <span class="n">superannuation</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">gross_pay</span><span class="p">,</span> <span class="n">tax_amount</span><span class="p">,</span> <span class="n">superannuation</span><span class="p">,</span> <span class="n">net_pay</span><span class="p">]</span>
+
+        <span class="n">cent_rounder</span> <span class="o">=</span> <span class="n">CentRounder</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+        <span class="n">rounded_results</span> <span class="o">=</span> <span class="n">cent_rounder</span><span class="o">.</span><span class="n">rounded_results</span>
+
+        <span class="k">return</span> <span class="n">rounded_results</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.pay_calculator.PayCalculator.__calculate_gross" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__calculate_gross</span><span class="p">(</span><span class="n">hourly_rate</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the weekly gross pay for an employee.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>hourly_rate</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The hourly rate for an employee in AUD</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hours_worked</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The amount of hours worked by an employee for the week</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>gross_pay</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The weekly gross pay calculated with the formula <code>hourly rate * hours worked</code></p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/pay_calculator.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__calculate_gross</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hourly_rate</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the weekly gross pay for an employee.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        hourly_rate: The hourly rate for an employee in AUD</span>
+<span class="sd">        hours_worked: The amount of hours worked by an employee for the week</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        gross_pay(int): The weekly gross pay calculated with the formula `hourly rate * hours worked`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gross_pay</span> <span class="o">=</span> <span class="n">hourly_rate</span> <span class="o">*</span> <span class="n">hours_worked</span>
+    <span class="k">return</span> <span class="n">gross_pay</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.pay_calculator.PayCalculator.__calculate_results" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__calculate_results</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the weekly net pay and pass all calculation results to the CentRounder class.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>rounded_results</code></td>          <td>
+                <code>tuple[str, str, str, str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The calculation results for gross pay, tax, superannuation and net pay, rounded to 2 decimal places</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/pay_calculator.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__calculate_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the weekly net pay and pass all calculation results to the CentRounder class.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        rounded_results(tuple[str, str, str, str]): The calculation results for gross pay, tax, superannuation and net pay, rounded to 2 decimal places</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span>
+    <span class="n">tax_amount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tax_amount</span>
+    <span class="n">superannuation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">super_amount</span>
+
+    <span class="n">net_pay</span> <span class="o">=</span> <span class="n">gross_pay</span> <span class="o">-</span> <span class="n">tax_amount</span> <span class="o">-</span> <span class="n">superannuation</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">gross_pay</span><span class="p">,</span> <span class="n">tax_amount</span><span class="p">,</span> <span class="n">superannuation</span><span class="p">,</span> <span class="n">net_pay</span><span class="p">]</span>
+
+    <span class="n">cent_rounder</span> <span class="o">=</span> <span class="n">CentRounder</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="n">rounded_results</span> <span class="o">=</span> <span class="n">cent_rounder</span><span class="o">.</span><span class="n">rounded_results</span>
+
+    <span class="k">return</span> <span class="n">rounded_results</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.pay_calculator.PayCalculator.__calculate_super" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__calculate_super</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the superannuation amount using the current super guarantee percentage.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>superannuation</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The weekly superannuation amount calculated with the formula <code>(gross pay * super percentage) / 100</code></p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/pay_calculator.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__calculate_super</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the superannuation amount using the current super guarantee percentage.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        superannuation(float): The weekly superannuation amount calculated with the formula `(gross pay * super percentage) / 100`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span>
+
+    <span class="n">super_percentage</span> <span class="o">=</span> <span class="mi">11</span>
+
+    <span class="n">superannuation</span> <span class="o">=</span> <span class="p">(</span><span class="n">gross_pay</span> <span class="o">*</span> <span class="n">super_percentage</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">superannuation</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.pay_calculator.PayCalculator.__calculate_tax" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__calculate_tax</span><span class="p">(</span><span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the tax amount by passing parameters to the TaxCalculator class to determine the correct tax formula.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>tfn</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Tax File Number of an employee (may be null)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>threshold_claimed</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A record of if an employee has claimed the tax-free threshold (may be null)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>residence</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The country of residence for an employee</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>tax_amount</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The weekly tax amount calculated with one of two formulas: <code>rounded gross pay * tax rate</code> or <code>coefficient A * (gross pay + 99 cents) - coefficient B</code></p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/pay_calculator.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__calculate_tax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tfn</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">residence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the tax amount by passing parameters to the TaxCalculator class to determine the correct tax formula.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        tfn: The Tax File Number of an employee (may be null)</span>
+<span class="sd">        threshold_claimed: A record of if an employee has claimed the tax-free threshold (may be null)</span>
+<span class="sd">        residence: The country of residence for an employee</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tax_amount(float): The weekly tax amount calculated with one of two formulas: `rounded gross pay * tax rate` or `coefficient A * (gross pay + 99 cents) - coefficient B`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gross_pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gross_pay</span>
+
+    <span class="n">tax_calculator</span> <span class="o">=</span> <span class="n">TaxCalculator</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">,</span> <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span>
+    <span class="n">tax_rate</span> <span class="o">=</span> <span class="n">tax_calculator</span><span class="o">.</span><span class="n">tax_rate</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tax_rate</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="n">pay_rounded</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">)</span>
+        <span class="n">tax_amount</span> <span class="o">=</span> <span class="n">pay_rounded</span> <span class="o">*</span> <span class="n">tax_rate</span>
+        <span class="k">return</span> <span class="n">tax_amount</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coef_a</span><span class="p">,</span> <span class="n">coef_b</span> <span class="o">=</span> <span class="n">tax_rate</span>
+
+        <span class="n">tax_amount</span> <span class="o">=</span> <span class="n">coef_a</span> <span class="o">*</span> <span class="p">(</span><span class="n">gross_pay</span> <span class="o">+</span> <span class="mf">0.99</span><span class="p">)</span> <span class="o">-</span> <span class="n">coef_b</span>
+        <span class="k">return</span> <span class="n">tax_amount</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="src.tax_calculator"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="src.tax_calculator.TaxCalculator" class="doc doc-heading">
+          <code>TaxCalculator</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/tax_calculator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">TaxCalculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gross_pay</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tfn</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">residence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tax_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_rate</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">,</span> <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__get_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gross_pay</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tfn</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">residence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the tax rate either as a float or as coefficients A and B.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            gross_pay: The weekly gross pay for an employee</span>
+<span class="sd">            tfn: The Tax File Number of an employee (may be null)</span>
+<span class="sd">            threshold_claimed: A record of if an employee has claimed the tax-free threshold (may be null)</span>
+<span class="sd">            residence: The country of residence for an employee</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tax_rate(float): If there is no tfn record, the tax rate is `0.4700` for Australian residents and `0.4500` for foreign residents</span>
+<span class="sd">            coefficients(tuple[float, float]): If there is a tfn record, pass the file name and gross pay parameters to the CsvReader class to determine the tax table coefficients</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">tfn</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">residence</span> <span class="o">!=</span> <span class="s1">&#39;Australia&#39;</span><span class="p">:</span>
+                <span class="n">tax_rate</span> <span class="o">=</span> <span class="mf">0.4500</span>
+                <span class="k">return</span> <span class="n">tax_rate</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tax_rate</span> <span class="o">=</span> <span class="mf">0.4700</span>
+                <span class="k">return</span> <span class="n">tax_rate</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+            <span class="k">if</span> <span class="n">residence</span> <span class="o">!=</span> <span class="s1">&#39;Australia&#39;</span><span class="p">:</span>
+                <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;foreign_resident&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tax_threshold</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">threshold_claimed</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;threshold_&#39;</span> <span class="o">+</span> <span class="n">tax_threshold</span>
+
+            <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">CsvReader</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">gross_pay</span><span class="p">)</span>
+            <span class="n">coefficients</span> <span class="o">=</span> <span class="n">csv_reader</span><span class="o">.</span><span class="n">row_result</span>
+            <span class="k">return</span> <span class="n">coefficients</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="src.tax_calculator.TaxCalculator.__get_rate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__get_rate</span><span class="p">(</span><span class="n">gross_pay</span><span class="p">,</span> <span class="n">tfn</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the tax rate either as a float or as coefficients A and B.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>gross_pay</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The weekly gross pay for an employee</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tfn</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Tax File Number of an employee (may be null)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>threshold_claimed</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A record of if an employee has claimed the tax-free threshold (may be null)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>residence</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The country of residence for an employee</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>tax_rate</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If there is no tfn record, the tax rate is <code>0.4700</code> for Australian residents and <code>0.4500</code> for foreign residents</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>coefficients</code></td>          <td>
+                <code>tuple[float, float]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If there is a tfn record, pass the file name and gross pay parameters to the CsvReader class to determine the tax table coefficients</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/tax_calculator.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__get_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gross_pay</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tfn</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">threshold_claimed</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">residence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the tax rate either as a float or as coefficients A and B.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        gross_pay: The weekly gross pay for an employee</span>
+<span class="sd">        tfn: The Tax File Number of an employee (may be null)</span>
+<span class="sd">        threshold_claimed: A record of if an employee has claimed the tax-free threshold (may be null)</span>
+<span class="sd">        residence: The country of residence for an employee</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tax_rate(float): If there is no tfn record, the tax rate is `0.4700` for Australian residents and `0.4500` for foreign residents</span>
+<span class="sd">        coefficients(tuple[float, float]): If there is a tfn record, pass the file name and gross pay parameters to the CsvReader class to determine the tax table coefficients</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">tfn</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">residence</span> <span class="o">!=</span> <span class="s1">&#39;Australia&#39;</span><span class="p">:</span>
+            <span class="n">tax_rate</span> <span class="o">=</span> <span class="mf">0.4500</span>
+            <span class="k">return</span> <span class="n">tax_rate</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tax_rate</span> <span class="o">=</span> <span class="mf">0.4700</span>
+            <span class="k">return</span> <span class="n">tax_rate</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="n">residence</span> <span class="o">!=</span> <span class="s1">&#39;Australia&#39;</span><span class="p">:</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;foreign_resident&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tax_threshold</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">threshold_claimed</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;threshold_&#39;</span> <span class="o">+</span> <span class="n">tax_threshold</span>
+
+        <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">CsvReader</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">gross_pay</span><span class="p">)</span>
+        <span class="n">coefficients</span> <span class="o">=</span> <span class="n">csv_reader</span><span class="o">.</span><span class="n">row_result</span>
+        <span class="k">return</span> <span class="n">coefficients</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
